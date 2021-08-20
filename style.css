@@ -1,0 +1,262 @@
+@import 'icons/flaticon.css';
+:root {
+   --title-color: #182370;
+   --title-color--lighter: #284df8;
+   --text-color: #5162b4;
+   --icon-one:rgb(29, 128, 221);
+   --icon-one-bg:rgba(29, 128, 221,0.3);
+   --icon-two:rgb(62, 149, 69);
+   --icon-two-bg:rgba(62, 149, 69,0.3);
+   --icon-three:rgb(247, 156, 50);
+   --icon-three-bg:rgba(247, 156, 50,0.3);
+   --icon-four:rgb(129, 39, 157);
+   --icon-four-bg:rgba(129, 39, 157,0.3);
+ }
+
+
+*{
+   padding:0;
+   margin:0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+   font-size:40px;
+}
+h2{
+   font-size:18px;
+   line-height: 30px;
+
+}
+h5{
+   font-size:12px;
+}
+body{
+   background: rgb(234,237,246);
+   background: linear-gradient(180deg, rgba(234,237,246,1) 0%, rgba(255,255,255,1) 50%);
+   height: 100vh;
+}
+.wrapper{
+   background-color: transparent;
+}
+.main{
+   background-color: transparent;
+   display:flex;
+   flex-direction: row;
+   flex-basis: 1;
+   width: 1400px;
+   padding:50px;
+   margin: 0 auto;
+  
+
+}
+
+.left{
+   background-color: transparent;
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   width: 50%;
+   padding-right:110px;
+   flex-grow: 1;
+}
+
+.author{
+   color:var(--text-color);
+   font-weight:400;
+   text-transform: uppercase;
+  
+}
+ .title{
+   color:var(--title-color);
+   margin-top:10px;
+   margin-bottom:25px;
+   font-weight: 600;
+}
+.title span{
+   color:var(--title-color--lighter);
+}
+ .text {
+   color: var(--text-color);
+   line-height: 25px;
+   margin-bottom: 30px;
+}
+ .action-link{
+   display:inline-block;
+   border:2px solid #fe9f27;
+   border-radius: 5px;
+   background-color: #fe9f27;
+   color:white;
+   padding:7px 15px;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size:14px;
+   font-weight: 600;
+   transition: 0.2s ease-in-out;
+}
+.action-link:hover{
+   background-color: white;
+   color: #fe9f27;
+
+}
+
+
+.right{
+   background-color: transparent;
+   display:flex;
+   flex-grow: 1;
+   width: 50%;
+}
+
+.right .container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.box{
+   border:1px solid #dcdbdc;
+   border-radius: 5px;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   padding:20px;
+   margin-left:25px;
+   margin-bottom: 25px;
+   width: 45%;
+
+}
+.box .text{
+   line-height: 20px;
+   font-size:15px;
+}
+.icon{
+   width: 50px;
+   height: 50px;
+   background-color: var(--icon-one-bg);
+   border-radius: 5px;
+   padding:10px;
+
+}
+
+.icon i{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   font-size:30px;
+   color:var(--icon-one);
+   font-weight: 800;
+}
+.box:nth-child(2n){
+   transform:translateY(25px)
+
+}
+.box:nth-child(2) .icon{
+   background-color: var(--icon-two-bg);
+}
+.box:nth-child(2) .icon i{
+   color:var(--icon-two);
+}
+.box:nth-child(3) .icon{
+   background-color: var(--icon-three-bg);
+}
+.box:nth-child(3) .icon i{
+   color:var(--icon-three);
+}
+.box:nth-child(4) .icon{
+   background-color: var(--icon-four-bg);
+}
+.box:nth-child(4) .icon i{
+   color:var(--icon-four);
+}
+.box-title{
+   color:#182370;
+   font-size:22px;
+   font-weight: 600;
+}
+
+
+@media only screen and (max-width: 1400px) {
+   .wrapper{
+      max-width: 1140px;
+      margin:0 auto;
+      padding:0;
+ 
+   }
+   .main {
+       flex-direction: column;
+       padding-left:0;
+       width:100%;
+       padding-right:0;
+   }
+   .left{
+
+      margin: 0 auto;
+      padding-right:0;
+      margin-bottom: 100px;
+   }
+   .right{
+    width:100%;
+   }
+   .right .container{
+      justify-content: center;
+      align-items: center;
+   }
+   .box{
+      width: 45%;
+      margin: 15px;
+     
+   }
+   .box:nth-child(2n) {
+      transform: translateY(0px);
+  }
+ }
+ @media only screen and (max-width: 992px) {
+   .wrapper{
+      max-width: 960px;
+      margin:0 auto;
+      padding:0;
+ 
+   }
+   .left{
+      width: 100%;
+      margin-bottom: 50px;
+      padding:25px;
+   }
+   .right{
+      width: 100%;
+   }
+   .box{
+
+   }
+ }
+
+ @media only screen and (max-width: 768px) {
+   .wrapper{
+      max-width: 720px;
+      margin:0 auto;
+      padding:0;
+ 
+   }
+   .left{
+      width: 100%;
+      margin-bottom: 50px;
+   }
+   .right{
+      width: 100%;
+   }
+   .box{
+      width: 100%;
+   }
+ }
+
+ /* 
+ 320px — 480px: Mobile devices.
+   481px — 768px: iPads, Tablets.
+   769px — 1024px: Small screens, laptops.
+   1025px — 1200px: Desktops, large screens.
+   1201px and more — Extra large screens, TV.
+ */
